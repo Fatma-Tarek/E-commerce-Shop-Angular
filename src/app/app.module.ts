@@ -7,6 +7,10 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
