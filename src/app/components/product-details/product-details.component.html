@@ -1,1 +1,32 @@
-<p>product-details works!</p>
+<div class="container" style="padding-top: 8%;">
+    <form #cartForm="ngForm" (ngSubmit)="onSubmit(cartForm)">
+
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="{{product.ProductPicUrl}}" alt="">
+            </div>
+            <div class="col-lg-4">
+                <h6 style="color:gray">Category: {{product.Category}}</h6>
+                <br>
+                <h5>Name: {{product.Name}}</h5>
+                <br>
+                <h6>Description: {{product.Description}}</h6>
+            </div>
+
+            <div class="col-lg-3 " style="border-radius: 5%; border: lightgray 2px solid;">
+                <div style="padding-top:20%;padding-left:10%;">
+                    <p style="display: inline;">Availability: </p>
+                    <p *ngIf="product.Status=='Available'" style="color:limegreen;display: inline;">In Stock.</p>
+                    <p *ngIf="product.Status!='Available'" style="color: red; display: inline;">Out Of Stock!</p>
+                    <hr style="margin-right:10%">
+                    <h2 style="padding-left:10px">${{product.Price}}</h2>
+                    <p>Quantity: </p>
+                    <input type="number" name="quantity" #quantityRef="ngModel" ngModel min=1>
+                    <input type="text" name="id" value="{{product.id}}" id="" hidden>
+                    <button class="btn btn-outline-default"[disabled]="product.Quantity<quantityRef.value" type="submit"><i class='fas fa-cart-plus'></i>Add To Cart</button>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

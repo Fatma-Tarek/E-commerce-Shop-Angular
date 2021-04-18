@@ -28,7 +28,7 @@ const routes: Routes = [
     component:ShoppingCartComponent
   },
   {
-    path:'products/{id}',
+    path:'products/:id',
     component:ProductDetailsComponent
   },
   {
