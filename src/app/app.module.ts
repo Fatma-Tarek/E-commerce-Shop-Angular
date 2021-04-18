@@ -7,11 +7,13 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ProductsService } from './services/products.service';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,15 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

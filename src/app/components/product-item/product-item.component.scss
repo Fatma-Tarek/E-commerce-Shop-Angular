@@ -1,0 +1,21 @@
+.card {
+  border: 0ch;
+  padding: 0px;
+  margin: 10px;
+  box-shadow: 5px 5px #cdd1ce;
+  max-width: 250px;
+}
+.card-title {
+  color: blue;
+  margin-top: 6px;
+  margin-left: 6px;
+  font-size: large;
+  text-align: center;
+}
+.card-price {
+  color: red;
+  font-size: large;
+}
+.AddToCard {
+  cursor: pointer;
+}
