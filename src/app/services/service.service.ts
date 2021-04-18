@@ -9,7 +9,5 @@ export class ServiceService {
 
   constructor(private _http:HttpClient) { }
 
-  getProductById(id) {
-    return this._http.get(`${environment.baseUrl}/products/${id}`);
-  }
+  
 }
