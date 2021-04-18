@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  productUrl:"https://afternoon-falls-30227.herokuapp.com/api/v1"
+  productUrl:"https://afternoon-falls-30227.herokuapp.com/api/v1",
+  contact_baseUrl: `https://afternoon-falls-30227.herokuapp.com/api/v1/contact_us`
+
 };
 
 /*

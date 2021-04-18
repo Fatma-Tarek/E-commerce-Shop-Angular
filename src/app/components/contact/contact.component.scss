@@ -1,0 +1,69 @@
+/*hr{
+    
+    border-top: 3px solid #ffd000;
+
+}
+*/
+hr {
+    background-color:rgb(192, 192, 192);
+    border: none;
+    display: block;
+    height: 1.5px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+}
+
+hr:before {
+    background-color: rgb(248, 205, 64);
+    content: '';
+    display: block;
+    height: 3.5px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 24%;
+    z-index: 1;
+}
+hr:after {
+    background-color: #ffff;
+    content: '';
+    display: block;
+    height: 3.5px;
+    right: 0;
+    position: absolute;
+    top: -2px;
+    width: 35%;
+    z-index: 1;
+}
+
+input,textarea{
+    border-radius: 15px 15px;
+    
+}
+textarea{
+    height: 100px;
+}
+
+label{
+    font-weight: bold;
+    color:rgb(107, 105, 105)
+}
+
+button{
+    background-color: rgb(238, 238, 192);
+    border:rgb(238, 238, 192);
+    border-radius: 20px 20px;
+    font-weight: bold;
+    color:rgb(107, 105, 105);
+    //padding:10px;
+    width:150px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+
+}
+.alert-danger{
+    background-color: rgb(248, 205, 64);
+    height:40px;
+
+    
+}
