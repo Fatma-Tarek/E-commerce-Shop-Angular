@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<div class="container p-5">
+    <h3> Leave us a Message</h3>
+    <hr>
+    <p>we're here to help your, feel free to tell us exactly about your needs, suggestions or complaints</p>
+
+    <form [formGroup]="courseForm" (ngSubmit)="onSubmit(courseForm)">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label >Name*</label>
+                    <input type="text" class="form-control" formControlName="name">
+                    <div class="alert alert-danger" *ngIf="courseForm.get('name')?.dirty && 
+                    courseForm.get('name')?.hasError('required')"> Name is Required
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label >Email*</label>
+                    <input type="email" class="form-control" formControlName="email" >
+                    <div class="alert alert-danger" *ngIf="courseForm.get('email')?.dirty && 
+                    courseForm.get('email')?.hasError('required')"> Email is Required
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        
+        <div class="col-8">
+            <div class="form-group">
+                <label >Subject*</label>
+                <input type="text" class="form-control" formControlName="subject" >
+                <div class="alert alert-danger" *ngIf="courseForm.get('subject')?.dirty && 
+                courseForm.get('subject')?.hasError('required')"> Subject is Required
+                </div>
+            </div>
+        </div>  
+        <div  class="col-8">
+            <div class="form-group">
+                <label >Message*</label>
+                <textarea type="text" class="form-control" formControlName="message" ></textarea>
+                <div class="alert alert-danger" *ngIf="courseForm.get('message')?.dirty && 
+                courseForm.get('message')?.hasError('required')"> Message is Required
+                </div>
+            </div>
+
+        </div>
+        <div class="p-3">
+            <button type="submit" class="btn btn-secondary ">Send Message</button>
+        </div>
+        <div class="alert alert-success" *ngIf="successRes"> Email Sent Successfully!
+        </div>
+    </form>
+</div>
