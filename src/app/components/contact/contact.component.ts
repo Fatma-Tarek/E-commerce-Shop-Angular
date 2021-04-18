@@ -16,9 +16,9 @@ export class ContactComponent implements OnInit {
   successRes=0;
   courseForm:FormGroup=this._fb.group({
     
-    "email":['',Validators.required],
+    "email":['',[Validators.required,Validators.email]],
     "message":['',Validators.required],
-    "name":['',Validators.required],
+    "name":['',[Validators.required, Validators.minLength(3)]],
     "subject":['',Validators.required]
 
   })
