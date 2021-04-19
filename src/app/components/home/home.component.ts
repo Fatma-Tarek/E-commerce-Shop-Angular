@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   sum:any;
   counter:any;
   searchTerm: string;
-  text: '';
+  text: '  ';
  // counter=JSON.parse(localStorage.getItem('localCart'))==null ? 0: JSON.parse(localStorage.getItem('localCart')).length;
   constructor(private _productServive : ProductsService,  private DataService : DataService) { }
 
