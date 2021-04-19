@@ -22,6 +22,9 @@
                     <div class="alert alert-danger" *ngIf="courseForm.get('email')?.dirty && 
                     courseForm.get('email')?.hasError('required')"> Email is Required
                     </div>
+                     <div class="alert alert-danger" *ngIf="courseForm.get('email')?.dirty && 
+                    courseForm.get('email')?.hasError('email')"> Not valid Email
+                    </div>
                 </div>
             </div> 
         </div> 
