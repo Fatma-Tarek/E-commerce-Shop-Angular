@@ -1,0 +1,34 @@
+#price{
+    padding-left:10px;
+    padding-bottom: 20px;
+}
+#right-card{
+    border-radius: 5%; 
+    border: lightgray 2px solid;
+    
+}
+#middle-card{
+    padding-right: 50px;
+}
+#quantity{
+    border-radius: 25px;
+    border:#e8e8e8 2px solid;
+    width: 60%;
+    padding-left: 20px;
+}
+#submit{
+    margin-top: 25px;
+    border-radius: 25px;
+    border: 0ch;
+    background-color: lightgrey;
+    height: 50px;
+    width: 90%;
+}
+#submit:disabled{
+    background-color: #e8e8e8;
+    color: white;
+}
+#inner-card{
+    padding-top:17%;
+    padding-left:10%;
+}

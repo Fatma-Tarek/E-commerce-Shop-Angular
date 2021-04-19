@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -14,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
 import { ProductsService } from './services/products.service';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 
@@ -37,7 +37,7 @@ import { ContactServiceService } from './services/contact-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     CommonModule,
