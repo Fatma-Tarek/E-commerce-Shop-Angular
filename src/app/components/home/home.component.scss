@@ -1,16 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Bellefair");
-#sticky {
+.sticky {
+ // position: -webkit-sticky;
   position: sticky;
-  position: -webkit-sticky;
-  background: #929ba8;
+  top: 0;
+  right:70px;
+  width: 200px;
+}
+
+#sticky {
+
+  background: #90acd3;
   width: 150px;
   height: 80px;
-  top: 70px;
+ 
   display: flex;
   justify-content: center;
   align-items: flex;
   box-shadow: 0 0 6px#dce6df;
   color: #000;
+  border-radius: 50px;
 }
 .test {
   border-radius: 50%;
@@ -22,3 +30,4 @@
   font-style: Arial, sans-serif;
   margin-top: 12px;
 }
+
