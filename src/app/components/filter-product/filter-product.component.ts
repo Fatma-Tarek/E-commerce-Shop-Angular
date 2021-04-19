@@ -1,20 +1,8 @@
 import { DataService } from './../../data.service';
-import { HttpClient } from '@angular/common/http';
 import { ProductsService } from 'src/app/services/products.service';
 import { Product } from 'src/app/interfaces/product.model';
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, from } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { Observable, Subject, asapScheduler, pipe, of, interval, merge, fromEvent } from 'rxjs';
-import { HttpEventType, HttpHeaders, HttpParams, HttpRequest} from "@angular/common/http";
 import * as _ from 'lodash';
-import {  Input, Output, EventEmitter } from '@angular/core';
-import { retry, retryWhen, delayWhen, scan } from 'rxjs/operators';
-import { getLocaleDateFormat } from '@angular/common';
-import { Pipe, PipeTransform } from "@angular/core";
-
-
-
 
 @Component({
   selector: 'app-filter-product',
@@ -73,5 +61,7 @@ export class FilterProductComponent implements OnInit {
       console.warn(this.filterProducts);
     }
 
+
+    
  
 }

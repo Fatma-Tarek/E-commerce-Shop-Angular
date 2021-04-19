@@ -1,41 +1,61 @@
 <input type="text" [(value)]="text" #name name="name" (keyup)="updateText(name.value)">
 <a routerLink="/products/all"><button class="btn btn-success pull-right" >Search</button></a>
 
+
 <div class="row m-1" style="max-width: 95%">
   <!--<div class="col col-1"></div>-->
   <div class="col col-11">
-    <div div class="row">
-      <app-product-item
-        class="col-md-4 mx-auto my-5 justify-content-center pl-5"
-        *ngFor="let singleProduct of products"
-        [product]="singleProduct"
-        (totalMoney)="getTotalMoney($event)"
-        (counter)="getCounter($event)"
-      >
-      </app-product-item>
-    </div>
+  <div div class="row">
+  <app-product-item
+  class="col-md-4 mx-auto my-5 justify-content-center pl-5"
+  *ngFor="let singleProduct of products"
+  [product]="singleProduct"
+  (totalMoney)="getTotalMoney($event)"
+  (counter)="getCounter($event)"
+  >
+  </app-product-item>
+  </div>
+  </div>
+  
+   <div class="col col-1" id="wrapper">
+  <div class="container row d-flex justify-content-between" id="sticky">
+  <div class="test rounded-circle col col-2">
+  {{ counter }}
+  </div>
+  <br />
+  <div class="col col-8 p-2" style="color: grey; display: block">
+  ${{ sum }}
+  <a [routerLink]="['cart']">
+  <i
+  class="fas fa-shopping-cart"
+  style="color: grey; display: inline-block"
+  >CheckOut</i
+  ></a
+  >
+  </div>
   </div>
   </div>
   <nav aria-label="Page navigation example" style="margin-left: 400px">
-    <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a
-          class="page-link"
-          (click)="PaginationFunction(currentPage - 1)"
-          *ngIf="currentPage > 1"
-          >Previous</a
-        >
-      </li>
-      <li class="page-item" *ngFor="let page of NumPages">
-        <a class="page-link" (click)="PaginationFunction(page)">{{ page }}</a>
-      </li>
-      <li class="page-item">
-        <a
-          class="page-link"
-          (click)="PaginationFunction(currentPage + 1)"
-          *ngIf="currentPage < NumPages?.length"
-          >Next</a
-        >
-      </li>
-    </ul>
-    </nav>
+  <ul class="pagination justify-content-center">
+  <li class="page-item">
+  <a
+  class="page-link"
+  (click)="PaginationFunction(currentPage - 1)"
+  *ngIf="currentPage > 1"
+  >Previous</a
+  >
+  </li>
+  <li class="page-item" *ngFor="let page of NumPages">
+  <a class="page-link" (click)="PaginationFunction(page)">{{ page }}</a>
+  </li>
+  <li class="page-item">
+  <a
+  class="page-link"
+  (click)="PaginationFunction(currentPage + 1)"
+  *ngIf="currentPage < NumPages?.length"
+  >Next</a
+  >
+  </li>
+  </ul>
+  </nav>
+  </div>
