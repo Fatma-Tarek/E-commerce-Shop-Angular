@@ -21,11 +21,11 @@
                     <hr style="margin-right:10%">
                     <h2 id="price">${{product.Price}}</h2>
                     <p>Quantity: </p>
-                    <input type="number" name="quantity" id="quantity" #quantityRef="ngModel" ngModel min=1 required>
+                    <input type="number" name="quantity" id="quantity" #quantityRef="ngModel" ngModel min=1 required >
                     <button [disabled]="product.Quantity<quantityRef.value" id="submit" type="submit"><i class='fas fa-cart-plus'></i>Add To Cart</button>
                     <p *ngIf="product.Quantity<quantityRef.value" style="color: red;">Not enoguh in stock, please select fewer quantity</p>
                     <p *ngIf="cartForm.form.invalid && cartForm.submitted" style="color: red; padding-top: 20px;">Please add the quantity you want.</p>
-                    <p *ngIf="cartForm.form.valid && cartForm.submitted" style="color: limegreen;padding-top: 20px;">Added To Card!</p>
+                    <p *ngIf="cartForm.form.valid && cartForm.submitted" style="color: limegreen;padding-top: 20px;" id="successText">Added To Card!</p>
 
                 </div>
             </div>
