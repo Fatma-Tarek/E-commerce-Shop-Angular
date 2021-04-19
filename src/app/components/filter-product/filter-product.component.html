@@ -1,0 +1,15 @@
+<div class="row m-1">
+    <!--<div class="col col-1"></div>-->
+    <div class="col col-11">
+      <div div class="row">
+        <app-product-item
+          class="col-md-4 mx-auto my-5"
+          *ngFor="let singleProduct of filterProducts"
+          [product]="singleProduct"
+          (totalMoney)="getTotalMoney($event)"
+          (counter)="getCounter($event)"
+        >
+        </app-product-item>
+      </div>
+    </div>
+</div>

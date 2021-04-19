@@ -19,6 +19,8 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactServiceService } from './services/contact-service.service';
+import { FilterProductComponent } from './components/filter-product/filter-product.component';
+//import { FilterDataComponent } from './components/filterAllData/filter-data';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { ContactServiceService } from './services/contact-service.service';
     AboutComponent,
     ContactComponent,
     ProductDetailsComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    FilterProductComponent,
   ],
   imports: [
     BrowserModule,
