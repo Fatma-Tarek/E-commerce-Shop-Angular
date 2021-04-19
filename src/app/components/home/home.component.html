@@ -1,4 +1,5 @@
-<input type="text" [(value)]="text" #name name="name" (keyup)="updateText(name.value)">
+<input type="text" [value]="text" #name name="name" (keyup)="updateText(name.value)" [(ngModel)]="text">
+
 <a routerLink="/products/all"><button class="btn btn-success pull-right" >Search</button></a>
 
 
