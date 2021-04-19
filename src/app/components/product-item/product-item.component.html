@@ -1,21 +1,20 @@
-<div class="card-group">
-  <div class="card" [routerLink]="['products', product.ProductId]">
-    <h5 class="card-title">{{ product.Name }}</h5>
-    <img
-      class="card-img-top"
-      src="{{ product.ProductPicUrl }}"
-      alt="Card image cap"
-      height="250"
-    />
-    <div class="card-body row">
-      <p class="card-price col col-9">${{ product.Price }}</p>
-      <a [routerLink]="['cart']" class="col col-3">
-        <i
-          class="fas fa-shopping-cart col col-3 AddToCard"
-          style="color: grey"
-          (click)="addToCard(product)"
-        ></i>
-      </a>
-    </div>
+<div class="card justify-content-center">
+  <h5 class="card-title">{{ product.Name }}</h5>
+  <img
+    class="card-img-top"
+    src="{{ product.ProductPicUrl }}"
+    alt="Card image cap"
+    height="250"
+    [routerLink]="['products', product.ProductId]"
+  />
+  <div class="card-body row">
+    <p class="card-price col col-9">${{ product.Price }}</p>
+    <!--<a [routerLink]="['cart']" class="col col-3">-->
+    <i
+      class="fas fa-shopping-cart col col-3 AddToCard"
+      style="color: grey"
+      (click)="addToCard(product)"
+    ></i>
+    <!-- </a>-->
   </div>
 </div>
