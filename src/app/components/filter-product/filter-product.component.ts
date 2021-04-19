@@ -37,7 +37,6 @@ export class FilterProductComponent implements OnInit {
 
       });
   }
-  
     ngOnInit() {
         
          this.data.share.subscribe( x => this.name= x);
@@ -62,6 +61,6 @@ export class FilterProductComponent implements OnInit {
     }
 
 
-    
+
  
 }
