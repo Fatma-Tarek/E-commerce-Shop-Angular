@@ -42,10 +42,27 @@ export class HomeComponent implements OnInit {
     })
   }
   PaginationFunction(page):void{
+    this.sum=0;
+    this.counter=0;
+    if(JSON.parse(localStorage.getItem('localCart'))==null){
+    this.sum=0;
+    this.counter=0;
+    }else{
+      JSON.parse(localStorage.getItem('localCart')).forEach(a =>  {
+        this.sum+=Number(a.Price * a.num);
+        this.counter+=Number(a.num);
+      });
+    }
+
+    console.warn(this.sum);
     console.log(page);
     this._productServive.getProducts(page).subscribe((res:any)=>{
       console.log(res);
       this.products=res.data;
+      this.products.forEach(product=>{
+        product.num=0;
+     })
+      
       this.currentPage=Number(res.page);
       this.NumPages= Array(res.total_pages).fill(res.total_pages).map((_, idx) =>idx+1);
       console.log(this.NumPages);

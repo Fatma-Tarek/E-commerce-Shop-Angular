@@ -42,6 +42,7 @@ export class ProductItemComponent implements OnInit {
     //   JSON.parse(localStorage.getItem('localCart')).forEach(a =>  sum+=Number(a.num));
     //   this.counter.emit(sum);
     //  }
+    console.log(product);
     if(product.num <= product.Quantity)
     {
 
@@ -80,7 +81,6 @@ export class ProductItemComponent implements OnInit {
           product.num=1;
           itemsCart.push(product);
           localStorage.setItem('localCart',JSON.stringify(itemsCart));
-
          }
          JSON.parse(localStorage.getItem('localCart')).forEach(a =>  {
           sumprice+=Number(a.Price * a.num);
