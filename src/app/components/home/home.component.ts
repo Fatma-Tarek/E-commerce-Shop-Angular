@@ -1,20 +1,25 @@
+import { DataService } from './../../data.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/product.model';
 import { ProductsService } from 'src/app/services/products.service';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
   products:Product[];
   NumPages;
   currentPage: number;
   sum:any;
   counter:any;
+  searchTerm: string;
+  text: '  ';
  // counter=JSON.parse(localStorage.getItem('localCart'))==null ? 0: JSON.parse(localStorage.getItem('localCart')).length;
-  constructor(private _productServive : ProductsService) { }
+  constructor(private _productServive : ProductsService,  private DataService : DataService) { }
 
   ngOnInit(): void {
     this.sum=0;
@@ -40,6 +45,8 @@ export class HomeComponent implements OnInit {
       this.NumPages= Array(res.total_pages).fill(res.total_pages).map((_, idx) =>idx+1);
       console.log(this.NumPages);
     })
+
+    
   }
   PaginationFunction(page):void{
     this.sum=0;
@@ -77,4 +84,14 @@ export class HomeComponent implements OnInit {
    this.counter=num;
  }
 
+ btnClick= function () {
+  this.routerLink="/all"
+};
+
+updateText(text){
+  this.DataService.updateData(text);
 }
+
+
+}
+

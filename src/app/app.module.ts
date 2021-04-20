@@ -19,8 +19,13 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactServiceService } from './services/contact-service.service';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import {ModalModule} from 'ngx-bootstrap/modal';
+
+import { FilterProductComponent } from './components/filter-product/filter-product.component';
+//import { FilterDataComponent } from './components/filterAllData/filter-data';
+
 
 
 @NgModule({
@@ -34,7 +39,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     ContactComponent,
     ProductDetailsComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    FilterProductComponent,
   ],
   imports: [
     BrowserModule,

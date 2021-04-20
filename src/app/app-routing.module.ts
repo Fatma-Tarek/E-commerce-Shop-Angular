@@ -5,6 +5,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { FilterProductComponent } from './components/filter-product/filter-product.component'
 
 const routes: Routes = [
   {
@@ -28,9 +29,14 @@ const routes: Routes = [
     component:ShoppingCartComponent
   },
   {
+    path:'products/all',
+    component:FilterProductComponent
+  },
+  {
     path:'products/:id',
     component:ProductDetailsComponent
   },
+
   {
     path: '**', redirectTo: ''
   }

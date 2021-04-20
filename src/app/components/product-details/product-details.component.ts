@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductsService } from 'src/app/services/products.service';
 import { Product } from '../../interfaces/product.model'
@@ -33,25 +33,32 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   }
   onSubmit(form: NgForm) {
     if (form.valid) {
-      let flag=0;
+      let flag = 0;
       let storageProds: any[];
       storageProds = JSON.parse(localStorage.getItem('localCart'));
-      storageProds.forEach(prod => {
-        if (prod.ProductId == this.product.ProductId) {
-          flag=1;
-          prod.num += form.value.quantity;
-        }
-        localStorage.setItem('localCart', JSON.stringify(storageProds));
-      });
-      if(flag==0){
-        this.product.num = form.value.quantity;
-        console.log(form.value.quantity);
+      if (storageProds) {
+        storageProds.forEach(prod => {
+          if (prod.ProductId == this.product.ProductId) {
+            flag = 1;
+            prod.num += form.value.quantity;
+          }
+          localStorage.setItem('localCart', JSON.stringify(storageProds));
+        });
+        if (flag == 0) {
+          this.product.num = form.value.quantity;
+          console.log(form);
           storageProds.push(this.product);
+          localStorage.setItem('localCart', JSON.stringify(storageProds));
+        }
+      }else{
+        this.product.num = form.value.quantity;
+          console.log(form);
+          storageProds=[this.product];
           localStorage.setItem('localCart', JSON.stringify(storageProds));
       }
       setTimeout(() => {
-        this.router.navigate(['cart']);
-    }, 2000);  
+        document.getElementById('successText').hidden=true;
+      }, 3000);
     }
   }
 
