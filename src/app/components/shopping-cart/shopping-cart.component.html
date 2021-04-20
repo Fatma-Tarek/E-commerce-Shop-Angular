@@ -1,6 +1,7 @@
 
-<h1 class="text-center mt-4">Cart</h1>
-
+<h1 class="text-center mt-4" style="background-color: #343a40;color: white;">Cart</h1>
+<p id="demo" style="color: green;text-align: center;"></p>
+<div id="full">
 <table class="table table-hover mt-4" *ngIf="selectedproducts; else noItemTemplate">
     <thead>
       <tr>
@@ -48,11 +49,68 @@
     <div class="row">
       <div class="col col-6">Total</div>
       <div class="col col-6" align="right">{{total | currency:'$':true}}</div>
-      <button class="btn btn-primary" style="margin-top: 20px;">Checkout</button>
+      <button class="btn btn-primary"  (click)="Check_Out()" style="margin-top: 20px;">Checkout</button>
       <button class="btn btn-danger " (click)="Delete_All()" style="margin-top: 20px;margin-left: 20px;" >Delete All</button>
     </div>
   </div>
 </div>
+</div>
+<!-- ===================== -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  
+ 
+<button type="button" class="btn btn-primary" (click)="showModal=true" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+  
+ 
+  <div class="modal" id="myModal" [ngClass]= "['show': showModal]">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" (click)="showModal=false" data-dismiss="modal">&times;</button>
+        </div>
+  
+     
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="showModal=false" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div> -->
+
+ <!-- <button (click)="openModal(template)">modal</button>
+  <ng-template #template>
+      <div class="modal-header">
+          <h4 class="modal-title pull-left">Modal</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()" >
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+          <label>name</label>
+          <p>your order completed succesfully</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary pull-right" (click)="modalRef.hide()" >Close</button>
+      </div>
+  </ng-template> -->
+  
+
+
+
+ 
 
 
   <!-- <span>{{selectedproducts | json}}</span> -->

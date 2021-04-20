@@ -19,6 +19,8 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactServiceService } from './services/contact-service.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import {ModalModule} from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -41,6 +43,9 @@ import { ContactServiceService } from './services/contact-service.service';
     HttpClientModule,
     ReactiveFormsModule,
     CommonModule,
+    NgbModule,
+    // ModalModule.forRoot(),
+    
   ],
   providers: [ProductsService,ContactServiceService],
   bootstrap: [AppComponent]
