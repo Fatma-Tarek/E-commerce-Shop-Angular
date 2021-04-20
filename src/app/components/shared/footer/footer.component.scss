@@ -1,18 +1,4 @@
-h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-    background-color:skyblue		;
-  }
-  h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }  
+ 
   .container-fluid {
     padding: 60px 50px;
   }
@@ -222,32 +208,6 @@ p {
   display: block;
   clear: both; }
 
-.dk-footer-form {
-  position: relative; }
-  .dk-footer-form input[type=email] {
-    padding: 14px 28px;
-    border-radius: 50px;
-    background: #2E2E2E;
-    border: 1px solid #2E2E2E; }
-  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::-webkit-input-placeholder {
-    color: #878787;
-    font-size: 14px; }
-  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::placeholder {
-    color: #878787;
-    font-size: 14px; }
-  .dk-footer-form button[type=submit] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 12px 24px 12px 17px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border: 1px solid #007bff;
-    background: #007bff;
-    color: #fff; }
-  .dk-footer-form button:hover {
-    cursor: pointer; }
-
 /* ==========================
 
     Contact
@@ -276,13 +236,13 @@ p {
     position: relative;
     color: #007bff; }
 
-.contact-info {
-  margin-left: 75px;
-  color: #fff; }
-  .contact-info h3 {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 0; }
+    .contact-info {
+      margin-left: 75px;
+      color: #fff; }
+      .contact-info h3 {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 0; }
 
 .copyright {
   padding: 28px 0;
@@ -297,33 +257,3 @@ p {
   .copyright a:hover {
     color:#007bff; }
 
-.copyright-menu ul {
-  text-align: right;
-  margin: 0; }
-
-.copyright-menu li {
-  display: inline-block;
-  padding-left: 20px; }
-
-.back-to-top {
-  position: relative;
-  z-index: 2; }
-  .back-to-top .btn-dark {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    padding: 0;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #2e2e2e;
-    border-color: #2e2e2e;
-    display: none;
-    z-index: 999;
-    -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear; }
-    .back-to-top .btn-dark:hover {
-      cursor: pointer;
-      background: #FA6742;
-      border-color: #FA6742; }
