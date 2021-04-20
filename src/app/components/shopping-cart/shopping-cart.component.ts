@@ -50,16 +50,17 @@ export class ShoppingCartComponent implements OnInit {
 
   }
 
-  Check_Out(){
+Check_Out(){
    var txt;
-  if (confirm("confirm your order ")) {
+   if (confirm("confirm your order ")) {
     txt = "Your Order Completed Seccesfully";
+    this.selectedproducts = [];
+    localStorage.clear();
+    document.getElementById("full").style.visibility = "hidden";
   } else {
     txt = "";
   }
-  this.selectedproducts = [];
-  localStorage.clear();
-  document.getElementById("full").style.visibility = "hidden";
+  
   document.getElementById("demo").innerHTML = txt;
   }
 
