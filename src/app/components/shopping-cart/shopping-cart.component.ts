@@ -49,6 +49,7 @@ export class ShoppingCartComponent implements OnInit {
     this.total = 0;
 
   }
+
   
   Check_Out(){
    var txt;
@@ -60,16 +61,13 @@ export class ShoppingCartComponent implements OnInit {
     this.selectedproducts = [];
     localStorage.clear();
     document.getElementById("full").style.visibility = "hidden";
-    
   } else {
     txt = "";
   }
   
   document.getElementById("demo").innerHTML = txt;
   }
-
-
-
+    
     incQnt(ProductId,num, Quantity ){
     for(let i=0; i<this.selectedproducts.length;i++){
     if(this.selectedproducts[i].ProductId === ProductId){
@@ -99,7 +97,7 @@ export class ShoppingCartComponent implements OnInit {
     if(localStorage.getItem('localCart')){
     this.selectedproducts = JSON.parse(localStorage.getItem('localCart'));
     this.total = this.selectedproducts.reduce(function(acc, val){
-return acc + (val.Price * val.Quantity);
+    return acc + (val.Price * val.Quantity);
     }, 0);
      }
      }
