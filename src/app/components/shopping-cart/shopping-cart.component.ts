@@ -49,17 +49,22 @@ export class ShoppingCartComponent implements OnInit {
     this.total = 0;
 
   }
-
+  
   Check_Out(){
    var txt;
   if (confirm("confirm your order ")) {
-    txt = "Your Order Completed Seccesfully";
+    txt = "Your Order Completed Seccesfully , We Will arrive to you soon ";
+    (document.getElementById("igm") as HTMLImageElement).src = "../../../assets/img/hh.gif";
+    document.getElementById("igm").style.width ="500px";
+    document.getElementById("todo").style.textAlign ="center";
+    this.selectedproducts = [];
+    localStorage.clear();
+    document.getElementById("full").style.visibility = "hidden";
+    
   } else {
     txt = "";
   }
-  this.selectedproducts = [];
-  localStorage.clear();
-  document.getElementById("full").style.visibility = "hidden";
+  
   document.getElementById("demo").innerHTML = txt;
   }
 
